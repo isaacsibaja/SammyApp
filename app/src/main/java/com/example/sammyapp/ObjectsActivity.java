@@ -17,75 +17,74 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class ColorsActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class ObjectsActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
-    private ImageView ivColor;
+    private ImageView ivObject;
     private TextView tvEnglish, tvSpanish;
-    private List<ColorItem> colorList;
+    private List<ObjectItem> objectList;
     private int currentIndex = 0;
     private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.activity_objects);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Learn Colors");
+            getSupportActionBar().setTitle("Learn Objects");
         }
 
-        ivColor = findViewById(R.id.ivColor);
+        ivObject = findViewById(R.id.ivObject);
         tvEnglish = findViewById(R.id.tvEnglish);
         tvSpanish = findViewById(R.id.tvSpanish);
-        
+
         tts = new TextToSpeech(this, this);
-        loadColorData();
+        loadObjectData();
         updateUI();
 
         findViewById(R.id.btnPrevious).setOnClickListener(v -> {
-            currentIndex = (currentIndex - 1 + colorList.size()) % colorList.size();
+            currentIndex = (currentIndex - 1 + objectList.size()) % objectList.size();
             updateUI();
         });
 
         findViewById(R.id.btnNext).setOnClickListener(v -> {
-            currentIndex = (currentIndex + 1) % colorList.size();
+            currentIndex = (currentIndex + 1) % objectList.size();
             updateUI();
         });
 
         findViewById(R.id.btnSpeak).setOnClickListener(v -> speakOut());
     }
 
-    private void loadColorData() {
-        colorList = new ArrayList<>();
-        colorList.add(new ColorItem("Red", "Rojo", "red.png"));
-        colorList.add(new ColorItem("Blue", "Azul", "blue.png"));
-        colorList.add(new ColorItem("Yellow", "Amarillo", "yellow.png"));
-        colorList.add(new ColorItem("Green", "Verde", "green.png"));
-        colorList.add(new ColorItem("Purple", "Morado", "purple.png"));
-        colorList.add(new ColorItem("Pink", "Rosa", "pink.png"));
-        colorList.add(new ColorItem("Orange", "Naranja", "orange.png"));
-        colorList.add(new ColorItem("Black", "Negro", "black.png"));
-        colorList.add(new ColorItem("White", "Blanco", "white.png"));
-        colorList.add(new ColorItem("Brown", "Marrón", "brown.png"));
-        colorList.add(new ColorItem("Gray", "Gris", "gray.png"));
+    private void loadObjectData() {
+        objectList = new ArrayList<>();
+        objectList.add(new ObjectItem("Chair", "Silla", "chair.png"));
+        objectList.add(new ObjectItem("Table", "Mesa", "table.png"));
+        objectList.add(new ObjectItem("Bed", "Cama", "bed.png"));
+        objectList.add(new ObjectItem("Book", "Libro", "book.png"));
+        objectList.add(new ObjectItem("Pencil", "Lápiz", "pencil.png"));
+        objectList.add(new ObjectItem("Bag", "Mochila", "bag.png"));
+        objectList.add(new ObjectItem("Shoe", "Zapato", "shoe.png"));
+        objectList.add(new ObjectItem("Clock", "Reloj", "clock.png"));
+        objectList.add(new ObjectItem("Door", "Puerta", "door.png"));
+        objectList.add(new ObjectItem("Window", "Ventana", "window.png"));
     }
 
     private void updateUI() {
-        ColorItem item = colorList.get(currentIndex);
+        ObjectItem item = objectList.get(currentIndex);
         tvEnglish.setText(item.englishName);
         tvSpanish.setText(item.spanishName);
 
         try (InputStream is = getAssets().open("images/" + item.imageName)) {
-            ivColor.setImageDrawable(Drawable.createFromStream(is, null));
+            ivObject.setImageDrawable(Drawable.createFromStream(is, null));
         } catch (IOException e) {
-            Log.e("ColorsActivity", "Error loading: " + item.imageName);
-            ivColor.setImageResource(android.R.drawable.ic_menu_report_image);
+            Log.e("ObjectsActivity", "Error loading: " + item.imageName);
+            ivObject.setImageResource(android.R.drawable.ic_menu_report_image);
         }
     }
 
     private void speakOut() {
-        tts.speak(colorList.get(currentIndex).englishName, TextToSpeech.QUEUE_FLUSH, null, null);
+        tts.speak(objectList.get(currentIndex).englishName, TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
     @Override
@@ -111,9 +110,9 @@ public class ColorsActivity extends AppCompatActivity implements TextToSpeech.On
         super.onDestroy();
     }
 
-    private static class ColorItem {
+    private static class ObjectItem {
         String englishName, spanishName, imageName;
-        ColorItem(String en, String es, String img) {
+        ObjectItem(String en, String es, String img) {
             this.englishName = en; this.spanishName = es; this.imageName = img;
         }
     }

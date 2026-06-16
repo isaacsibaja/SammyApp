@@ -17,75 +17,74 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class ColorsActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class NumbersActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
-    private ImageView ivColor;
+    private ImageView ivNumber;
     private TextView tvEnglish, tvSpanish;
-    private List<ColorItem> colorList;
+    private List<NumberItem> numberList;
     private int currentIndex = 0;
     private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.activity_numbers);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Learn Colors");
+            getSupportActionBar().setTitle("Learn Numbers");
         }
 
-        ivColor = findViewById(R.id.ivColor);
+        ivNumber = findViewById(R.id.ivNumber);
         tvEnglish = findViewById(R.id.tvEnglish);
         tvSpanish = findViewById(R.id.tvSpanish);
-        
+
         tts = new TextToSpeech(this, this);
-        loadColorData();
+        loadNumberData();
         updateUI();
 
         findViewById(R.id.btnPrevious).setOnClickListener(v -> {
-            currentIndex = (currentIndex - 1 + colorList.size()) % colorList.size();
+            currentIndex = (currentIndex - 1 + numberList.size()) % numberList.size();
             updateUI();
         });
 
         findViewById(R.id.btnNext).setOnClickListener(v -> {
-            currentIndex = (currentIndex + 1) % colorList.size();
+            currentIndex = (currentIndex + 1) % numberList.size();
             updateUI();
         });
 
         findViewById(R.id.btnSpeak).setOnClickListener(v -> speakOut());
     }
 
-    private void loadColorData() {
-        colorList = new ArrayList<>();
-        colorList.add(new ColorItem("Red", "Rojo", "red.png"));
-        colorList.add(new ColorItem("Blue", "Azul", "blue.png"));
-        colorList.add(new ColorItem("Yellow", "Amarillo", "yellow.png"));
-        colorList.add(new ColorItem("Green", "Verde", "green.png"));
-        colorList.add(new ColorItem("Purple", "Morado", "purple.png"));
-        colorList.add(new ColorItem("Pink", "Rosa", "pink.png"));
-        colorList.add(new ColorItem("Orange", "Naranja", "orange.png"));
-        colorList.add(new ColorItem("Black", "Negro", "black.png"));
-        colorList.add(new ColorItem("White", "Blanco", "white.png"));
-        colorList.add(new ColorItem("Brown", "Marrón", "brown.png"));
-        colorList.add(new ColorItem("Gray", "Gris", "gray.png"));
+    private void loadNumberData() {
+        numberList = new ArrayList<>();
+        numberList.add(new NumberItem("One", "Uno", "one.png"));
+        numberList.add(new NumberItem("Two", "Dos", "two.png"));
+        numberList.add(new NumberItem("Three", "Tres", "three.png"));
+        numberList.add(new NumberItem("Four", "Cuatro", "four.png"));
+        numberList.add(new NumberItem("Five", "Cinco", "five.png"));
+        numberList.add(new NumberItem("Six", "Seis", "six.png"));
+        numberList.add(new NumberItem("Seven", "Siete", "seven.png"));
+        numberList.add(new NumberItem("Eight", "Ocho", "eight.png"));
+        numberList.add(new NumberItem("Nine", "Nueve", "nine.png"));
+        numberList.add(new NumberItem("Ten", "Diez", "ten.png"));
     }
 
     private void updateUI() {
-        ColorItem item = colorList.get(currentIndex);
+        NumberItem item = numberList.get(currentIndex);
         tvEnglish.setText(item.englishName);
         tvSpanish.setText(item.spanishName);
 
         try (InputStream is = getAssets().open("images/" + item.imageName)) {
-            ivColor.setImageDrawable(Drawable.createFromStream(is, null));
+            ivNumber.setImageDrawable(Drawable.createFromStream(is, null));
         } catch (IOException e) {
-            Log.e("ColorsActivity", "Error loading: " + item.imageName);
-            ivColor.setImageResource(android.R.drawable.ic_menu_report_image);
+            Log.e("NumbersActivity", "Error loading: " + item.imageName);
+            ivNumber.setImageResource(android.R.drawable.ic_menu_report_image);
         }
     }
 
     private void speakOut() {
-        tts.speak(colorList.get(currentIndex).englishName, TextToSpeech.QUEUE_FLUSH, null, null);
+        tts.speak(numberList.get(currentIndex).englishName, TextToSpeech.QUEUE_FLUSH, null, null);
     }
 
     @Override
@@ -111,9 +110,9 @@ public class ColorsActivity extends AppCompatActivity implements TextToSpeech.On
         super.onDestroy();
     }
 
-    private static class ColorItem {
+    private static class NumberItem {
         String englishName, spanishName, imageName;
-        ColorItem(String en, String es, String img) {
+        NumberItem(String en, String es, String img) {
             this.englishName = en; this.spanishName = es; this.imageName = img;
         }
     }

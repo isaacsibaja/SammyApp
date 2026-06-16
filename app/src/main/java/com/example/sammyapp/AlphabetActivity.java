@@ -65,6 +65,26 @@ public class AlphabetActivity extends AppCompatActivity implements TextToSpeech.
         alphabetList.add(new AlphabetItem("D", "Dog", "Perro", "dog.png"));
         alphabetList.add(new AlphabetItem("E", "Egg", "Huevo", "egg.png"));
         alphabetList.add(new AlphabetItem("F", "Fish", "Pez", "fish.png"));
+        alphabetList.add(new AlphabetItem("G", "Grape", "Uva", "grape.png"));
+        alphabetList.add(new AlphabetItem("H", "Hat", "Sombrero", "hat.png"));
+        alphabetList.add(new AlphabetItem("I", "Ice Cream", "Helado", "ice_cream.png"));
+        alphabetList.add(new AlphabetItem("J", "Juice", "Jugo", "juice.png"));
+        alphabetList.add(new AlphabetItem("K", "Kite", "Cometa", "kite.png"));
+        alphabetList.add(new AlphabetItem("L", "Lion", "León", "lion.png"));
+        alphabetList.add(new AlphabetItem("M", "Monkey", "Mono", "monkey.png"));
+        alphabetList.add(new AlphabetItem("N", "Nose", "Nariz", "nose.png"));
+        alphabetList.add(new AlphabetItem("O", "Orange", "Naranja", "orange_fruit.png"));
+        alphabetList.add(new AlphabetItem("P", "Pig", "Cerdo", "pig.png"));
+        alphabetList.add(new AlphabetItem("Q", "Queen", "Reina", "queen.png"));
+        alphabetList.add(new AlphabetItem("R", "Rabbit", "Conejo", "rabbit.png"));
+        alphabetList.add(new AlphabetItem("S", "Sun", "Sol", "sun.png"));
+        alphabetList.add(new AlphabetItem("T", "Tiger", "Tigre", "tiger.png"));
+        alphabetList.add(new AlphabetItem("U", "Umbrella", "Paraguas", "umbrella.png"));
+        alphabetList.add(new AlphabetItem("V", "Violin", "Violín", "violin.png"));
+        alphabetList.add(new AlphabetItem("W", "Whale", "Ballena", "whale.png"));
+        alphabetList.add(new AlphabetItem("X", "Xylophone", "Xilófono", "xylophone.png"));
+        alphabetList.add(new AlphabetItem("Y", "Yo-yo", "Yo-yo", "yoyo.png"));
+        alphabetList.add(new AlphabetItem("Z", "Zebra", "Cebra", "zebra.png"));
     }
 
     private void updateUI() {

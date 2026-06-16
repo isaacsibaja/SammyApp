@@ -11,25 +11,47 @@
         android:roundIcon="@drawable/mi_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SammyApp" >
-        <activity
-            android:name=".AnimalsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.SammyApp" />
-        <activity
-            android:name=".ColorsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.SammyApp" />
+        
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlphabetActivity" />
+
+        <activity
+            android:name=".ColorsActivity"
+            android:exported="false"
+            android:label="Learn Colors" />
+        
+        <activity
+            android:name=".AnimalsActivity"
+            android:exported="false"
+            android:label="Learn Animals" />
+        
+        <activity
+            android:name=".AlphabetActivity"
+            android:exported="false"
+            android:label="Learn Alphabet" />
+
+        <activity
+            android:name=".NumbersActivity"
+            android:exported="false"
+            android:label="Learn Numbers" />
+
+        <activity
+            android:name=".FruitsActivity"
+            android:exported="false"
+            android:label="Learn Fruits" />
+
+        <activity
+            android:name=".ObjectsActivity"
+            android:exported="false"
+            android:label="Learn Objects" />
+
     </application>
 
 </manifest>

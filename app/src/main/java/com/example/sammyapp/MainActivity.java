@@ -9,9 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Install the splash screen before calling super.onCreate()
         SplashScreen.installSplashScreen(this);
-        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -23,5 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btnAlphabet).setOnClickListener(v -> 
             startActivity(new Intent(this, AlphabetActivity.class)));
+
+        findViewById(R.id.btnNumbers).setOnClickListener(v -> 
+            startActivity(new Intent(this, NumbersActivity.class)));
+
+        findViewById(R.id.btnFruits).setOnClickListener(v -> 
+            startActivity(new Intent(this, FruitsActivity.class)));
+
+        findViewById(R.id.btnObjects).setOnClickListener(v -> 
+            startActivity(new Intent(this, ObjectsActivity.class)));
     }
 }

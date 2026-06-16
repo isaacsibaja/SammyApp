@@ -65,6 +65,14 @@ public class AnimalsActivity extends AppCompatActivity implements TextToSpeech.O
         animalList.add(new AnimalItem("Bird", "Pájaro", "bird.png"));
         animalList.add(new AnimalItem("Fish", "Pez", "fish.png"));
         animalList.add(new AnimalItem("Frog", "Rana", "frog.png"));
+        animalList.add(new AnimalItem("Lion", "León", "lion.png"));
+        animalList.add(new AnimalItem("Tiger", "Tigre", "tiger.png"));
+        animalList.add(new AnimalItem("Elephant", "Elefante", "elephant.png"));
+        animalList.add(new AnimalItem("Monkey", "Mono", "monkey.png"));
+        animalList.add(new AnimalItem("Rabbit", "Conejo", "rabbit.png"));
+        animalList.add(new AnimalItem("Horse", "Caballo", "horse.png"));
+        animalList.add(new AnimalItem("Pig", "Cerdo", "pig.png"));
+        animalList.add(new AnimalItem("Sheep", "Oveja", "sheep.png"));
     }
 
     private void updateUI() {

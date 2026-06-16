@@ -1,89 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="@color/background_soft">
+    android:background="@color/background_soft"
+    android:fillViewport="true">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:cardCornerRadius="60dp"
-        app:cardElevation="4dp"
-        android:layout_marginBottom="16dp">
-        
-        <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/mi_logo"
-            android:scaleType="centerCrop"
-            android:contentDescription="App Logo" />
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Categories"
+        android:orientation="vertical"
         android:gravity="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="42sp"
-        android:textStyle="bold" />
+        android:padding="24dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnColors"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="24dp"
-        android:text="Colors"
-        android:textSize="24sp"
-        android:textAllCaps="false"
-        app:cornerRadius="24dp"
-        android:backgroundTint="@color/pastel_pink"
-        android:textColor="@color/text_dark"
-        app:icon="@android:drawable/ic_menu_gallery"
-        app:iconGravity="textStart"
-        app:iconTint="@color/text_dark"
-        app:elevation="4dp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+            
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mi_logo"
+                android:scaleType="centerCrop"
+                android:contentDescription="App Logo" />
+        </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAnimals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="24dp"
-        android:text="Animals"
-        android:textSize="24sp"
-        android:textAllCaps="false"
-        app:cornerRadius="24dp"
-        android:backgroundTint="@color/pastel_green"
-        android:textColor="@color/text_dark"
-        app:icon="@android:drawable/ic_menu_view"
-        app:iconGravity="textStart"
-        app:iconTint="@color/text_dark"
-        app:elevation="4dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Categories"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="42sp"
+            android:textStyle="bold" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAlphabet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="24dp"
-        android:text="Alphabet"
-        android:textSize="24sp"
-        android:textAllCaps="false"
-        app:cornerRadius="24dp"
-        android:backgroundTint="@color/pastel_blue"
-        android:textColor="@color/text_dark"
-        app:icon="@android:drawable/ic_menu_sort_alphabetically"
-        app:iconGravity="textStart"
-        app:iconTint="@color/text_dark"
-        app:elevation="4dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Colors"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_pink"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_gallery"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
 
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnimals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Animals"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_green"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_view"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAlphabet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Alphabet"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_blue"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_sort_alphabetically"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Numbers"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_yellow"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFruits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Fruits"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_orange"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_camera"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnObjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Objects"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/pastel_purple"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_manage"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+    </LinearLayout>
+</ScrollView>
