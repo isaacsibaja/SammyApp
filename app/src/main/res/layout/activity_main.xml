@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp"
-    android:background="#FFF9F5">
+    android:padding="24dp"
+    android:background="@color/background_soft">
 
-    <Button
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Categories"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnColors"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,10 +28,15 @@
         android:text="Colors"
         android:textSize="24sp"
         android:textAllCaps="false"
-        android:backgroundTint="#FFB7B2"
-        android:textColor="#FFFFFF" />
+        app:cornerRadius="24dp"
+        android:backgroundTint="@color/pastel_pink"
+        android:textColor="@color/text_dark"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:iconGravity="textStart"
+        app:iconTint="@color/text_dark"
+        app:elevation="4dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAnimals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,10 +45,15 @@
         android:text="Animals"
         android:textSize="24sp"
         android:textAllCaps="false"
-        android:backgroundTint="#B2F2BB"
-        android:textColor="#FFFFFF" />
+        app:cornerRadius="24dp"
+        android:backgroundTint="@color/pastel_green"
+        android:textColor="@color/text_dark"
+        app:icon="@android:drawable/ic_menu_view"
+        app:iconGravity="textStart"
+        app:iconTint="@color/text_dark"
+        app:elevation="4dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAlphabet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +62,12 @@
         android:text="Alphabet"
         android:textSize="24sp"
         android:textAllCaps="false"
-        android:backgroundTint="#B2D8FF"
-        android:textColor="#FFFFFF" />
+        app:cornerRadius="24dp"
+        android:backgroundTint="@color/pastel_blue"
+        android:textColor="@color/text_dark"
+        app:icon="@android:drawable/ic_menu_sort_alphabetically"
+        app:iconGravity="textStart"
+        app:iconTint="@color/text_dark"
+        app:elevation="4dp" />
 
 </LinearLayout>

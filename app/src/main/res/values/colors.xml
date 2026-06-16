@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Pastel Palette -->
+    <color name="pastel_pink">#FFD1DC</color>
+    <color name="pastel_blue">#AEC6CF</color>
+    <color name="pastel_yellow">#FDFD96</color>
+    <color name="pastel_green">#B2F2BB</color>
+    <color name="pastel_purple">#CDB4DB</color>
+    <color name="pastel_orange">#FFCCAC</color>
+    <color name="background_soft">#FFF9F5</color>
+    <color name="text_dark">#4A4A4A</color>
+    
+    <color name="colorPrimary">#FFAFCC</color>
+    <color name="colorPrimaryDark">#FF8FB1</color>
+    <color name="colorAccent">#A2D2FF</color>
 </resources>
