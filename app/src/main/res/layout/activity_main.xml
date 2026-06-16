@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#FFF9F5">
+
+    <Button
+        android:id="@+id/btnColors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="24dp"
+        android:text="Colors"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#FFB7B2"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnAnimals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="24dp"
+        android:text="Animals"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#B2F2BB"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnAlphabet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="24dp"
+        android:text="Alphabet"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#B2D8FF"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
