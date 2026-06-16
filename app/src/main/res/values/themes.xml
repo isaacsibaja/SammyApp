@@ -22,4 +22,11 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/background_soft</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/mi_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.SammyApp</item>
+    </style>
 </resources>

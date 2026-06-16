@@ -8,6 +8,22 @@
     android:padding="24dp"
     android:background="@color/background_soft">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+        
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mi_logo"
+            android:scaleType="centerCrop"
+            android:contentDescription="App Logo" />
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.sammyapp"
-    compileSdk = 35 // Cambiado de release(36) a 35 (Android 15)
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.sammyapp"
@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.core.splashscreen)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
