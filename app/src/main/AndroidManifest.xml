@@ -52,6 +52,11 @@
             android:exported="false"
             android:label="Learn Objects" />
 
+        <activity
+            android:name=".DaysActivity"
+            android:exported="false"
+            android:label="Learn Days" />
+
     </application>
 
 </manifest>

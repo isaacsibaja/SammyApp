@@ -30,5 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btnObjects).setOnClickListener(v -> 
             startActivity(new Intent(this, ObjectsActivity.class)));
+
+        findViewById(R.id.btnDays).setOnClickListener(v -> 
+            startActivity(new Intent(this, DaysActivity.class)));
     }
 }

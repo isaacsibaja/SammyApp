@@ -136,5 +136,21 @@
             app:iconGravity="textStart"
             app:iconTint="@color/text_dark" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Days"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="#CDB4DB"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_my_calendar"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
     </LinearLayout>
 </ScrollView>
