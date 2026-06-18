@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_soft"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Lado Izquierdo: Logo y Título -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="60dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mi_logo"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Lado Derecho: Botones en Cuadrícula (usando Layouts anidados para simplicidad) -->
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnColors"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Colors"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_pink"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_gallery" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAnimals"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Animals"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_green"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_view" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAlphabet"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Alphabet"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_blue"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_sort_alphabetically" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNumbers"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Numbers"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_yellow"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_today" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFruits"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Fruits"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_orange"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_camera" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnObjects"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Objects"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_purple"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_manage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDays"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Days"
+                app:cornerRadius="16dp"
+                android:backgroundTint="#B2DFDB"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_my_calendar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMonths"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Months"
+                app:cornerRadius="16dp"
+                android:backgroundTint="#A2D2FF"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_month" />
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
