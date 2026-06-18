@@ -62,6 +62,11 @@
             android:exported="false"
             android:label="Learn Months" />
 
+        <activity
+            android:name=".ProfessionsActivity"
+            android:exported="false"
+            android:label="Learn Professions" />
+
     </application>
 
 </manifest>
