@@ -184,5 +184,37 @@
             app:iconGravity="textStart"
             app:iconTint="@color/text_dark" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Math"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="#B2F2BB"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBodyParts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:text="Body Parts"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            android:backgroundTint="#F8BBD0"
+            android:textColor="@color/text_dark"
+            app:icon="@android:drawable/ic_menu_info_details"
+            app:iconGravity="textStart"
+            app:iconTint="@color/text_dark" />
+
     </LinearLayout>
 </ScrollView>

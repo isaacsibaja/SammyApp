@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@color/background_soft"
+    android:gravity="center">
+
+    <!-- Área de Tablas (Dos Columnas para mejor visibilidad) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTableContent1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_dark"
+                android:fontFamily="monospace" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#EEEEEE" />
+
+            <TextView
+                android:id="@+id/tvTableContent2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_dark"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Panel de Controles -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvSpanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPractice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practicar"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:cornerRadius="16dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            app:icon="@android:drawable/ic_menu_edit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="Prev"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_pink"
+                android:textColor="@color/text_dark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="Next"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/pastel_green"
+                android:textColor="@color/text_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

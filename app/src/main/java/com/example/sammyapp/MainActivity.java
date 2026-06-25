@@ -39,5 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btnProfessions).setOnClickListener(v -> 
             startActivity(new Intent(this, ProfessionsActivity.class)));
+
+        findViewById(R.id.btnMath).setOnClickListener(v -> 
+            startActivity(new Intent(this, MathActivity.class)));
+
+        findViewById(R.id.btnBodyParts).setOnClickListener(v -> 
+            startActivity(new Intent(this, BodyPartsActivity.class)));
     }
 }

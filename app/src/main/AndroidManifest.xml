@@ -22,50 +22,17 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ColorsActivity"
-            android:exported="false"
-            android:label="Learn Colors" />
-        
-        <activity
-            android:name=".AnimalsActivity"
-            android:exported="false"
-            android:label="Learn Animals" />
-        
-        <activity
-            android:name=".AlphabetActivity"
-            android:exported="false"
-            android:label="Learn Alphabet" />
-
-        <activity
-            android:name=".NumbersActivity"
-            android:exported="false"
-            android:label="Learn Numbers" />
-
-        <activity
-            android:name=".FruitsActivity"
-            android:exported="false"
-            android:label="Learn Fruits" />
-
-        <activity
-            android:name=".ObjectsActivity"
-            android:exported="false"
-            android:label="Learn Objects" />
-
-        <activity
-            android:name=".DaysActivity"
-            android:exported="false"
-            android:label="Learn Days" />
-
-        <activity
-            android:name=".MonthsActivity"
-            android:exported="false"
-            android:label="Learn Months" />
-
-        <activity
-            android:name=".ProfessionsActivity"
-            android:exported="false"
-            android:label="Learn Professions" />
+        <activity android:name=".ColorsActivity" android:exported="false" />
+        <activity android:name=".AnimalsActivity" android:exported="false" />
+        <activity android:name=".AlphabetActivity" android:exported="false" />
+        <activity android:name=".NumbersActivity" android:exported="false" />
+        <activity android:name=".FruitsActivity" android:exported="false" />
+        <activity android:name=".ObjectsActivity" android:exported="false" />
+        <activity android:name=".DaysActivity" android:exported="false" />
+        <activity android:name=".MonthsActivity" android:exported="false" />
+        <activity android:name=".ProfessionsActivity" android:exported="false" />
+        <activity android:name=".MathActivity" android:exported="false" />
+        <activity android:name=".BodyPartsActivity" android:exported="false" />
 
     </application>
 

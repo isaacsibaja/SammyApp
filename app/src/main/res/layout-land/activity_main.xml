@@ -169,6 +169,32 @@
                 android:textColor="@color/text_dark"
                 app:icon="@android:drawable/ic_menu_edit" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMath"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Math"
+                app:cornerRadius="16dp"
+                android:backgroundTint="#B2F2BB"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_add" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBodyParts"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="0dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="4dp"
+                android:layout_columnWeight="1"
+                android:text="Body Parts"
+                app:cornerRadius="16dp"
+                android:backgroundTint="#F8BBD0"
+                android:textColor="@color/text_dark"
+                app:icon="@android:drawable/ic_menu_info_details" />
+
         </GridLayout>
     </LinearLayout>
 </ScrollView>
